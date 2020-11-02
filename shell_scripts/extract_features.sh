@@ -16,7 +16,7 @@
 module add FFmpeg/4.1-foss-2018b
 module add PyTorch/1.4.0-fosscuda-2019b-Python-3.7.4
 module add torchvision/0.5.0-fosscuda-2019b-Python-3.7.4-PyTorch-1.4.0
-
+cd ..
 python extract_features.py --inference --model resnet --model_depth 50 --n_classes 700 \
            --resume_path /scratch/kshitijd/Algonauts2020/checkpoints/r3d50_K_200ep.pth \
            --save_dir /scratch/kshitijd/Algonauts2020/activations/r3d50_K \
