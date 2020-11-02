@@ -9,8 +9,12 @@ def parse_opts():
                         type=Path,
                         help='Root directory path')
     parser.add_argument('--video_path',
-                        default=None,
-                        type=Path,
+                        default='D:/Projects/Algonauts2020/AlgonautsVideos268_All_30fpsmax',
+                        type=str,
+                        help='Directory path of videos')
+    parser.add_argument('--save_dir',
+                        default='./activations',
+                        type=str,
                         help='Directory path of videos')
     parser.add_argument('--annotation_path',
                         default=None,
@@ -155,7 +159,7 @@ def parse_opts():
                         help='Batch Size')
     parser.add_argument(
         '--inference_batch_size',
-        default=0,
+        default=1,
         type=int,
         help='Batch Size for inference. 0 means this is the same as batch_size.'
     )
