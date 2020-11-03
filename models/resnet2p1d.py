@@ -252,7 +252,7 @@ class ResNet(nn.Module):
 
         if not self.no_max_pool:
             x = self.maxpool(x)
-
+        x = self.layer1(x)
         if return_activations:
             activations.append(x)
         x = self.layer2(x)
